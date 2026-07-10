@@ -17,7 +17,7 @@ const Education: React.FC = () => {
       degree: 'B.Tech in Computer Science — Specialization in AI/ML',
       institution: 'UPES, Dehradun, India',
       date: 'Aug 2023 – Aug 2027',
-      grade: '7.3 / 10 CGPA',
+      grade: '7.43 / 10 CGPA',
       description: 'Acquiring deep foundations in Algorithms, Computer Vision, Deep Learning, and Neural Networks. Spearheading practical projects involving vision-language models and transfer learning datasets.',
       icon: <GraduationCap size={18} />
     },

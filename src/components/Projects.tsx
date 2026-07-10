@@ -35,45 +35,50 @@ const Projects: React.FC = () => {
 
   const projects: Project[] = [
     {
+      title: 'Enterprise Workforce Management Platform – AI Ops Assistant',
+      tech: ['Node.js', 'Kafka', 'Docker', 'Kubernetes'],
+      date: '2026',
+      description: 'Collaborated on re-architecting a monolithic MERN application into a nine-service microservices system with domain-driven service boundaries and polyglot persistence.',
+      icon: <Laptop size={22} />,
+      githubUrl: 'https://github.com/pdsprabh/Enterprise-Workforce-Management-Platform',
+      highlights: [
+        'Designed an event-driven backbone using a Kafka message bus and an API gateway with JWT-based authentication and RBAC across services.',
+        'Defined the Kubernetes infrastructure and deployment topology, and used AI-assisted development tooling (Antigravity) to accelerate scaffolding across the monorepo.'
+      ]
+    },
+    {
+      title: 'AI-Powered Hospital Management System',
+      tech: ['Java', 'Gemini API', 'Notion API'],
+      date: '2026',
+      description: 'Authored a detailed PRD and technical design (with Mermaid architecture diagrams) for an AI-augmented hospital management system integrating the Gemini API for clinical decision support.',
+      icon: <HeartPulse size={22} />,
+      githubUrl: 'https://github.com/Rohan-crypt/HMS',
+      highlights: [
+        'Specified a locally-deployable architecture for data privacy and control, with project documentation structured and maintained via the Notion API.'
+      ]
+    },
+    {
+      title: 'Sentimental-Alpha – AI Trading Research Terminal',
+      tech: ['Python', 'PyTorch', 'FastAPI', 'Streamlit'],
+      date: '2026',
+      description: 'Built a trading research platform combining a PPO reinforcement learning agent with FinBERT-based news sentiment analysis to generate high-conviction trade signals.',
+      icon: <Recycle size={22} />,
+      githubUrl: 'https://github.com/Rohan-crypt/Sentimental-Alpha',
+      highlights: [
+        'Engineered a 16-dimensional market state space (RSI, MACD, volume momentum, financial stress index) with a custom risk-gating mechanism linking volatility to the agent’s risk appetite.',
+        'Served real-time inference via a FastAPI backend and built an interactive Streamlit dashboard for visualizing signals and validation metrics (Monte Carlo robustness, rolling Sharpe ratio).'
+      ]
+    },
+    {
       title: 'Context-Aware Screen Assistant',
       tech: ['Python', 'Ollama', 'Llama 3', 'LLaVA'],
-      description: 'Architected a privacy-first AI productivity suite that synchronizes LLaVA (vision) and Llama 3 (language) for real-time workspace analysis and complex UI interpretation — running fully local.',
+      date: '2025',
+      description: 'Architected a privacy-first AI productivity suite synchronizing a vision model (LLaVA) and a language model (Llama 3) for real-time, fully local workspace analysis – zero data leaves the device.',
       icon: <Laptop size={22} />,
-      githubUrl: 'https://github.com/Rohan-crypt',
+      githubUrl: 'https://github.com/Rohan-crypt/screen-assistant',
       highlights: [
-        'Implemented global hotkey-driven interaction.',
-        'Designed zero-latency vision analysis.',
-        'Ensured zero data leaves the local device.'
-      ],
-      additionalDetails: 'Built leveraging Python bindings for Ollama API. The system handles desktop window capture, runs vision models locally to parse text, tables, and buttons, and allows natural language questions about the user\'s screen state.'
-    },
-    {
-      title: 'E-Waste Classification System',
-      tech: ['Python', 'TensorFlow', 'MobileNetV2', 'OpenCV'],
-      date: 'Sep 2025 – Nov 2025',
-      description: 'Built a transfer learning pipeline using MobileNetV2 to classify electronic waste into recyclable categories, enabling automated segregation for sustainability.',
-      icon: <Recycle size={22} />,
-      githubUrl: 'https://github.com/Rohan-crypt',
-      highlights: [
-        'Fine-tuned pre-trained weights on custom e-waste data.',
-        'Integrated OpenCV for real-time camera inference.',
-        'Achieved 92.4% validation classification accuracy.'
-      ],
-      additionalDetails: 'Created custom preprocessing pipelines to resize and normalize images. Deployed the lightweight MobileNetV2 model to enable edge inference on small machines, showing promising results for real-time sorting bins.'
-    },
-    {
-      title: 'Hospital Management System',
-      tech: ['Java', 'OOP', 'Swing', 'MySQL'],
-      date: 'Feb 2025 – Apr 2025',
-      description: 'Designed and developed a full-featured desktop application to manage patient records, scheduling, and billing, following SOLID OOP principles.',
-      icon: <HeartPulse size={22} />,
-      githubUrl: 'https://github.com/Rohan-crypt',
-      highlights: [
-        'Built an intuitive Swing-based responsive GUI.',
-        'Streamlined administrative workflows and billing.',
-        'Implemented role-based login security.'
-      ],
-      additionalDetails: 'Utilized Java Swing for components layout. Modeled data tables with normalization in MySQL, handling transactional operations for scheduling appointments, updating patient histories, and printing PDF receipts.'
+        'Implemented global hotkey-driven interaction for instant, on-demand AI analysis of any screen region without disrupting user workflow.'
+      ]
     }
   ];
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Brain, Layers, Database, Terminal } from 'lucide-react';
+import { Code2, Brain, Layers, Database, Terminal, Server } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface SkillItem {
@@ -20,18 +20,27 @@ const TechStack: React.FC = () => {
       icon: <Code2 size={20} />,
       items: [
         { name: 'Python', level: 90 },
-        { name: 'Java', level: 80 },
-        { name: 'C', level: 70 }
+        { name: 'Java', level: 85 },
+        { name: 'C', level: 75 }
       ]
     },
     {
       category: 'ML / AI',
       icon: <Brain size={20} />,
       items: [
-        { name: 'TensorFlow & PyTorch', level: 85 },
+        { name: 'TensorFlow & PyTorch', level: 90 },
         { name: 'Transfer Learning & CNNs', level: 85 },
-        { name: 'LLMs & Ollama', level: 80 },
-        { name: 'LLaVA & Llama 3', level: 75 }
+        { name: 'LLMs (Ollama, LLaVA, Llama 3)', level: 85 }
+      ]
+    },
+    {
+      category: 'Systems & Architecture',
+      icon: <Server size={20} />,
+      items: [
+        { name: 'Microservices & Kafka', level: 85 },
+        { name: 'Kubernetes & Docker', level: 80 },
+        { name: 'REST APIs & API Gateway', level: 85 },
+        { name: 'MERN Stack & JWT/RBAC', level: 80 }
       ]
     },
     {
@@ -39,24 +48,25 @@ const TechStack: React.FC = () => {
       icon: <Layers size={20} />,
       items: [
         { name: 'NumPy & Pandas', level: 85 },
-        { name: 'OpenCV & Computer Vision', level: 80 },
-        { name: 'scikit-learn', level: 80 },
-        { name: 'MobileNetV2', level: 75 }
+        { name: 'OpenCV', level: 80 },
+        { name: 'scikit-learn & MobileNetV2', level: 80 }
       ]
     },
     {
       category: 'Databases',
       icon: <Database size={20} />,
       items: [
-        { name: 'MySQL', level: 75 },
-        { name: 'MongoDB', level: 70 }
+        { name: 'MySQL', level: 80 },
+        { name: 'MongoDB', level: 75 },
+        { name: 'PostgreSQL', level: 75 }
       ]
     },
     {
       category: 'Dev Tools',
       icon: <Terminal size={20} />,
       items: [
-        { name: 'Git & GitHub', level: 85 },
+        { name: 'Git & GitHub', level: 90 },
+        { name: 'Docker', level: 80 },
         { name: 'VS Code & Jupyter', level: 90 }
       ]
     }

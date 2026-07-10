@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         </h2>
         
         <p className="hero-objective">
-          Results-driven Computer Science undergraduate specializing in AI/ML, with hands-on experience building privacy-focused AI applications, transfer learning pipelines, and security analytics tools. Proficient in Python, TensorFlow, and PyTorch, with a track record of delivering impactful solutions — from a real-time LLM-powered screen assistant to an e-waste classification system.
+          Computer Science undergraduate specializing in AI/ML with hands-on experience designing scalable, service-oriented systems and building production-style AI applications end to end. Recently re-architected a monolithic enterprise platform into a nine-service microservices system (Kafka event bus, Kubernetes, API gateway with JWT/RBAC), reflecting a systems-design and architecture mindset beyond typical coursework. Proficient in Python, Java, TensorFlow, and PyTorch, with a consistent record of shipping fully working projects rather than prototypes.
         </p>
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
