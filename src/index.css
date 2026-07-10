@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --bg-deep: #05040a;
+  --bg-panel: rgba(10, 8, 20, 0.75);
+  --bg-panel-solid: #0c0a17;
+  
+  --primary: #9d4edd;
+  --primary-glow: rgba(157, 78, 221, 0.3);
+  --primary-light: #c77dff;
+  
+  --accent: #1a0033;
+  --cyan: #00f5d4;
+  --cyan-glow: rgba(0, 245, 212, 0.3);
+  --magenta: #ff007f;
+  --magenta-glow: rgba(255, 0, 127, 0.3);
+  --purple-dark: #240046;
+  
+  --text-main: #f0edf5;
+  --text-muted: #8c889e;
+  --border-glass: rgba(0, 245, 212, 0.15); /* Tech cyan border */
+  --border-active: rgba(255, 0, 127, 0.5); /* Glitched magenta border */
+  --shadow-main: 0 0 20px rgba(0, 245, 212, 0.05);
+  --bg-mesh-gradient: radial-gradient(circle at 10% 20%, rgba(157, 78, 221, 0.15) 0%, transparent 45%),
+                      radial-gradient(circle at 90% 80%, rgba(0, 245, 212, 0.1) 0%, transparent 45%);
+  --scrollbar-thumb: var(--cyan);
+  --scrollbar-track: var(--bg-deep);
+  --grid-color: rgba(0, 245, 212, 0.035);
+  --bracket-color: var(--cyan);
+}
+
+:root.light {
+  --bg-deep: #f2f2f6;
+  --bg-panel: rgba(255, 255, 255, 0.75);
+  --bg-panel-solid: #ffffff;
+  
+  --primary: #0066cc; /* Hard cyber blue */
+  --primary-glow: rgba(0, 102, 204, 0.15);
+  --primary-light: #3399ff;
+  
+  --accent: #e5e5ea;
+  --cyan: #0088cc;
+  --cyan-glow: rgba(0, 136, 204, 0.15);
+  --magenta: #d9005b; /* Deeper crimson for contrast */
+  --magenta-glow: rgba(217, 0, 91, 0.15);
+  --purple-dark: #8e8e93;
+  
+  --text-main: #121214;
+  --text-muted: #6e6e78;
+  --border-glass: rgba(0, 136, 204, 0.2); /* Tech blue border */
+  --border-active: rgba(217, 0, 91, 0.45);
+  --shadow-main: 0 0 15px rgba(0, 136, 204, 0.05);
+  --bg-mesh-gradient: radial-gradient(circle at 10% 20%, rgba(0, 102, 204, 0.06) 0%, transparent 45%),
+                      radial-gradient(circle at 90% 80%, rgba(217, 0, 91, 0.04) 0%, transparent 45%);
+  --scrollbar-thumb: var(--primary);
+  --scrollbar-track: #f2f2f6;
+  --grid-color: rgba(0, 102, 204, 0.045);
+  --bracket-color: var(--primary);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+/* Repeating Cyber HUD Grid Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  transition: background-image 0.3s ease;
+}
+
+/* Custom Scrollbar (Sci-Fi Block Style) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 0;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--magenta);
+}
+
+::selection {
+  background: var(--cyan);
+  color: #000;
+}
+
+/* Animated Cyber Scanline Overlay */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--cyan), transparent);
+  opacity: 0.1;
+  z-index: 1001;
+  pointer-events: none;
+  animation: scan 10s linear infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateY(-10px); }
+  100% { transform: translateY(100vh); }
+}
